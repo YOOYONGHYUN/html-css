@@ -1,0 +1,103 @@
+div,input, textarea{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/shoes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1px;
+    position: relative;
+}
+
+.main-title {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+}
+
+.main-content {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+.main-button {
+    margin-top: 20px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gray-box {
+    color: black;
+    text-align: center;
+    width: 70%;
+    max-width: 700px;
+    background-color: rgb(206, 205, 205);
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    top: -40px;
+}
+
+.form-background {
+    padding: 30px;
+    background-color: black;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+input[type=email] {
+    margin-top: -10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.name {
+    display: flex;
+}
+
+.name :first-child {
+    margin-right: 30px;
+}
+
+.name > div {
+    width: 100%;
+}
+
+input[type=text] {
+    margin-top: -10px;
+    width: 100%;
+    padding: 10px;
+}
+
+textarea {
+    margin-top: -10px;
+    width: 100%;
+}
+
+.submit {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
