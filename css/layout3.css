@@ -230,11 +230,15 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .bot_bar-copyright i {
     margin-right: 5px;
 }
+
+
+
 
 @media screen and (max-width:768px) {
     .nav_background {
