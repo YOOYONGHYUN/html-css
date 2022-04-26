@@ -1,0 +1,288 @@
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.admin {
+  max-width: 1200px;
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 60px;
+  background-color: rgb(66, 66, 214);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.sidebar i {
+  margin-top: 20px;
+}
+
+.admin-main {
+  width: 100%;
+}
+
+.search {
+  padding: 20px 20px 0px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-input {
+  display: flex;
+}
+
+@mixin search {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.search input {
+  padding-left: 8px;
+  @include search();
+}
+
+.search-input-icon {
+  @include search();
+  background-color: black;
+  width: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -5px;
+  height: 35px;
+}
+
+@mixin alarm {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(235, 6, 6);
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.alarm {
+  color: rgb(105, 104, 104);
+  display: flex;
+  i {
+    margin-right: 20px;
+  }
+}
+
+.alarm-icon {
+  position: relative;
+  margin-right: 20px;
+}
+
+.alarm-icon-text {
+  @include alarm;
+  bottom: 11px;
+  left: 7px;
+}
+
+.hamburger {
+  display: none;
+}
+
+section {
+  margin-top: 8px;
+  background-color: rgb(241, 240, 240);
+  padding: 0px 20px;
+  border-top: 3px solid rgb(201, 201, 201);
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@mixin card($border) {
+  background-color: white;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 5px;
+  border-left: $border;
+  box-shadow: 2px 2px 2px 2px rgb(214, 213, 213);
+}
+
+.card-box {
+  @include card(5px solid skyblue);
+
+  i {
+    color: rgb(97, 97, 97);
+  }
+}
+
+.card-box-text {
+  display: flex;
+  flex-direction: column;
+
+  span:first-child {
+    color: rgb(107, 107, 107);
+    margin-bottom: 9px;
+  }
+
+  span:nth-child(2) {
+    font-weight: 600;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+.content-box {
+  box-shadow: 2px 2px 2px 2px rgb(214, 213, 213);
+}
+
+.content-header {
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+
+  h4 {
+    margin-left: 20px;
+  }
+}
+
+.content-chart {
+  width: 720px;
+  padding: 30px;
+  background-color: white;
+}
+
+.task-shadow {
+  margin-left: 40px;
+  box-shadow: 2px 2px 2px 2px rgb(214, 213, 213);
+}
+
+.task-grid {
+  border: 1px solid rgb(212, 212, 212);
+  display: grid;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-columns: 70px 70px 70px 70px 70px;
+}
+
+@mixin task {
+  background-color: white;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+@mixin blue($width) {
+  background-color: rgb(84, 84, 253);
+  height: 22px;
+  width: $width;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.task-grid-top {
+  grid-row: 1/2;
+  grid-column: 1/6;
+  @include task;
+  div {
+    @include blue(30px);
+  }
+}
+
+.task-grid-mid {
+  grid-row: 2/3;
+  grid-column: 1/6;
+  @include task;
+  div {
+    @include blue(22px);
+  }
+}
+
+.task-grid-bot {
+  grid-row: 3/4;
+  grid-column: 1/6;
+  @include task;
+  div {
+    @include blue(22px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .hamburger {
+    padding: 20px;
+    color: grey;
+    width: 65px;
+    height: 40px;
+    border: 1px solid rgb(197, 196, 196);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-chart {
+    width: 100%;
+  }
+
+  .task-shadow {
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 350px;
+  }
+
+  .admin-main {
+    width: 92%;
+  }
+}
